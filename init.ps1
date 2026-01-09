@@ -1,26 +1,12 @@
-New-Item -ItemType Directory -Force core/app/models
-New-Item -ItemType Directory -Force core/app/services
-New-Item -ItemType Directory -Force core/tests
+#!/bin/bash
 
-New-Item -ItemType Directory -Force ai/prompts
-New-Item -ItemType Directory -Force ai/services
-New-Item -ItemType Directory -Force ai/evaluators
+mkdir -p core/app/{models,services} core/tests
+mkdir -p ai/{prompts,services,evaluators}
+mkdir -p automation/{workflows,engine,triggers}
+mkdir -p api/{routes,schemas}
+mkdir -p ui/web
+mkdir -p infra/{docker,k8s,terraform}
+mkdir -p docs
+mkdir -p .github/{workflows,ISSUE_TEMPLATE}
 
-New-Item -ItemType Directory -Force automation/workflows
-New-Item -ItemType Directory -Force automation/engine
-New-Item -ItemType Directory -Force automation/triggers
-
-New-Item -ItemType Directory -Force api/routes
-New-Item -ItemType Directory -Force api/schemas
-
-New-Item -ItemType Directory -Force ui/web
-
-New-Item -ItemType Directory -Force infra/docker
-New-Item -ItemType Directory -Force infra/k8s
-New-Item -ItemType Directory -Force infra/terraform
-
-New-Item -ItemType Directory -Force docs
-
-New-Item -ItemType File -Force README.md
-New-Item -ItemType File -Force docker-compose.yml
-New-Item -ItemType File -Force .env.example
+touch README.md docker-compose.yml .env.example
